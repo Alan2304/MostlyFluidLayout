@@ -1,0 +1,206 @@
+*{
+    font-family: 'Merriweather', serif;
+}
+
+a{
+    text-decoration: none;
+    color: #69C5F1;
+}
+
+.book-img {
+    max-width: 100%;
+}
+
+/* header styles */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+nav.navbar ul{
+    list-style: none;
+    display: inline-block;
+}
+
+nav.navbar ul li{
+    display: inline-block;
+    margin: 0 8px
+}
+
+nav.navbar ul li a{
+    text-decoration: none;
+    color: #69C5F1;
+    font-family: Merriweather;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* End of header styles */
+
+/* Body Styles */
+
+.container{
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+}
+
+.left{
+    width: 60%;
+}
+
+.right{
+    width: 40%;
+}
+
+.blog-post{
+    margin-bottom: 32px;
+    padding-right: 16px;
+}
+
+.green-circle{
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #A2C210;
+    border: 2px solid #A2C210;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+p.advice-text{
+    color: #868686;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.blog-post p{
+    font-size: 14px;
+    text-align: justify;
+}
+
+span.author{
+    color: orangered;
+}
+
+div.blog-post h2{
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.yellow-circle{
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #F2CD2F;
+    border: 2px solid #F2CD2F;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* End of Body Styles */
+
+/* Styles  Recreation of the image */
+.book{
+    position: relative;
+    margin-top: 80px;
+}
+
+.book-cover{
+    width: 80%;
+    height: 500px;
+    background-color: #F2CD2F;
+    padding: 16px;
+    position: relative;
+    z-index: 3;
+}
+
+.book-cover h2{
+    color: white;
+    font-size: 32px;
+    width: 80%;
+    font-weight: normal;
+}
+
+.book-cover p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.recreated-logo{
+    width: 80px;
+    height: 80px;
+    background-color: #F1E434;
+    padding: 10px 16px;
+    position: absolute;
+    bottom: 26px;
+}
+
+.recreated-logo p{
+    color: white;
+    font-size: 48px;
+    margin: 10px 16px;
+}
+
+.book-content{
+    width: 80%;
+    box-shadow: 1px 1px 10px lightgray;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+}
+
+/* Rotate Effect */
+.book:hover div.book-content{
+    transform: rotate(5deg) translate(30%, -80px);
+    transition: all ease-in-out 200ms;
+}
+
+.book:not(:hover) div.book-content{
+    transform: rotate(0deg) translate(0px, 0px);
+    transition: all ease-in-out 200ms;
+}
+
+
+/* End of styles Recreation of the image */
+
+/* Media Queries */
+@media all and (max-width: 425px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    .left{
+        width: 100%;
+    }
+    
+    .right{
+        width: 100%;
+    }
+    .right img{
+        width: 100%;
+    }
+    .book{
+        display: none;
+    }
+    .book-img{
+        display: block
+    }
+}
+
+@media all and (min-width: 1200px){
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+
+    .book-img{
+        display: none;
+    }
+}
